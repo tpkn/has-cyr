@@ -1,0 +1,16 @@
+{
+   "name": "has-cyr",
+   "main": "has-cyr.js",
+   "version": "1.0.1",
+   "author": {
+      "url": "https://github.com/tpkn/"
+   },
+   "repository": "https://github.com/tpkn/has-cyr",
+   "license": "MIT",
+   "keywords": [
+      "translit",
+      "cyr",
+      "cyrillic",
+      "detect"
+   ]
+}
