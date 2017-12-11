@@ -1,5 +1,5 @@
 /**
- * Has Cyr (v1.0.1.20171210), http://tpkn.me
+ * Has Cyr (v1.0.2.20171210), http://tpkn.me
  */
 
 const dict = {
@@ -16,7 +16,7 @@ const dict = {
 function hasCyr(str, preproc, translit){
    let char, cyr_rule = /[а-яйё]/gi;
    let do_highlight = typeof preproc !== 'function' ? false : true;
-   let do_translit = typeof translit !== 'boolean' ? false : true;
+   let do_translit = typeof translit !== 'boolean' ? false : translit;
    
    if(cyr_rule.test(str)){
       str = str.replace(cyr_rule, (match, ...args) => {
