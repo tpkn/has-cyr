@@ -18,8 +18,8 @@ function chalkHighlighter(str){
 let text = 'Lогем iрsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod темроr incididunt ut labоге et dolore magna aliqua. Ut хуй ad minim veniam, quis nostrud ехегсitation ullamco laboris nisi ut aliquip eх ea соммоdo сопsequat. Duis aute irure dolor в reprehenderit in voluptate velit esse cillum dоlоre eu fugiat nulla pariatur. Ехсерtеr sint occaecat cupidatat поп proident, sunt in сиlра qui officia deserunt mollit anim id est laborum.';
 
 let cyr = hasCyr(text, chalkHighlighter);
-if(cyr.has){
-   console.log(cyr.str);
+if(cyr){
+   console.log(cyr);
 }
 ```
 
