@@ -6,6 +6,13 @@ Module that searches for cyrillic letters in the text. Can demonstrate the resul
 
 If you need to separately handle each match, you can use the preprocessor function (second argument)
 
+
+## Installation
+```bash
+npm install has-cyr
+```
+
+
 ## Usage
 ```javascript
 const chalk = require('chalk');
