@@ -1,7 +1,6 @@
 /**
- * Has Cyr (v1.0.2.20171210), http://tpkn.me
+ * Has Cyr, http://tpkn.me
  */
-
 const dict = {
    'а':'a','б':'b','в':'v','г':'g','д':'d','е':'e','ё':'yo','ж':'zh','з':'z',
    'и':'i','й':'i','к':'k','л':'l','м':'m','н':'n','о':'o','п':'p','р':'r',
@@ -13,16 +12,21 @@ const dict = {
    'Э':'E','Ю':'YU','Я':'YA'
 };
 
-function hasCyr(str, preproc, translit){
-   let char, cyr_rule = /[а-яйё]/gi;
-   let do_highlight = typeof preproc !== 'function' ? false : true;
-   let do_translit = typeof translit !== 'boolean' ? false : translit;
+function hasCyr(str, preproc, translit = false){
+   let char, cyr_rule = /[а-яйё]+/gi;
+   let modify = typeof preproc === 'function' ? true : false;
    
    if(cyr_rule.test(str)){
       str = str.replace(cyr_rule, (match, ...args) => {
-         char = str.substr(args[0], 1);
-         if(do_translit) char = char.replace(char, dict[char]);
-         if(do_highlight) char = preproc(char);
+         char = str.substr(args[0], match.length);
+
+         if(translit){
+         	char = char.split('').map(l => dict[l]).join('');
+         }
+         if(modify && !translit){
+         	char = preproc(char);
+         }
+
          return char;
       });
 

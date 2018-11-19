@@ -1,10 +1,8 @@
 # Has Cyr
 
-Module that searches for cyrillic letters in the text. Can demonstrate the results directly in the text.
+Module that searches for cyrillic characters in the text. It can highlight each cyrillic character or group of characters, or just transliterate them.
 
 ![preview](https://raw.githubusercontent.com/tpkn/has-cyr/master/preview.png)
-
-If you need to separately handle each match, you can use the preprocessor function (second argument)
 
 
 ## Installation
@@ -13,7 +11,28 @@ npm install has-cyr
 ```
 
 
-## Usage
+## API
+
+### hasCyr(text[, preprocessor, translit])
+
+### text
+**Type**: _String_
+
+
+### preprocessor
+**Type**: _Function_  
+Function helps modify matches
+
+
+### translit
+**Type**: _Boolean_  
+**Default**: `false`  
+Auto transliteration of cyrillic characters
+
+
+
+
+## Usage   
 ```javascript
 const chalk = require('chalk');
 const hasCyr = require('has-cyr');
@@ -36,3 +55,9 @@ let cyr = hasCyr(text, chalkHighlighter, true);
 ```
 
 ![translit](https://raw.githubusercontent.com/tpkn/has-cyr/master/translit.png)
+
+## Changelog 
+#### v1.0.4 (2018-11-20):
+- now consecutive cyrillic characters would be grouped together
+
+
