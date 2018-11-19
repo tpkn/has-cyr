@@ -21,10 +21,10 @@ function hasCyr(str, preproc, translit = false){
          char = str.substr(args[0], match.length);
 
          if(translit){
-         	char = char.split('').map(l => dict[l]).join('');
+            char = char.split('').map(l => dict[l]).join('');
          }
          if(modify && !translit){
-         	char = preproc(char);
+            char = preproc(char);
          }
 
          return char;
