@@ -1,4 +1,4 @@
-# Has Cyr
+# Has Cyr [![npm Package](https://img.shields.io/npm/v/has-cyr.svg)](https://www.npmjs.org/package/has-cyr)
 
 Module that searches for cyrillic characters in the text. It can highlight each cyrillic character or group of characters, or just transliterate them.
 
